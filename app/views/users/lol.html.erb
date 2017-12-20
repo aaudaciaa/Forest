@@ -1,0 +1,19 @@
+<h1>회원목록</h1>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">이메일</th>
+      <th scope="col">가입일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+        <tr>
+          <th scope="row"><%= user.id %></th>
+          <td><%= user.email %></td>
+          <td><%= user.created_at %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
